@@ -31,7 +31,9 @@ data
 ```
 
 `recv` contains the sampled wavforms which has been intentionally resampled to 2 samples/symbol (80GSa/s -> 56GSa/s) to compressed its size, `sent` is the symbol sequence loaded into AWG which repeatly emits pulse shaped samples through its DACs.
+
 `DP16QAM_RRC0.2_28GBd_1ch_SSNLW` is human readable meta of its corresponding experiments, which can interpreted as parameter terms 'Dual Polarization, 16-QAM, rooted raised cosine with rolloff factor 0.2, baudrate is 28GBd, single channel and single(or same or shared) source narrow linewidth laser'
+
 `LP-20_1.h5.dvc` is the meta file of its recording data file `LP-20_1.h5` which is stored remotely as hdf5 format. h5 file is open and widely supported, for example, see [pyh5](https://www.h5py.org/) and [Matlab](https://www.mathworks.com/help/matlab/import_export/importing-hierarchical-data-format-hdf5-files.html) for helps if you are Python and Matlab users.
 
 

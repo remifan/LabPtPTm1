@@ -1,4 +1,4 @@
 [core]
     remote = storage
 ['remote "storage"']
-    url = s3://labptptm1/dvcstore
+    url = s3://optcommpubdataqrfan/labptptm1/dvcstore

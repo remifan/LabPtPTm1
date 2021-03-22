@@ -1,6 +1,6 @@
 # LabPtPTm1
 
-LabPtPTm1(Lab dataset series - point to point link transmission data no. 1)
+LabPtPTm1(Lab dataset series - point to point 815km-SSMF transmission data no. 1)
 
 this dataset is collected in Aug. 2019 which is described and partially used in our [paper](https://www.nature.com/articles/s41467-020-17516-7).
 

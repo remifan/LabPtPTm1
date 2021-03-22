@@ -1,5 +1,6 @@
 [core]
-    remote = storage
-['remote "storage"']
+    remote = s3http
+['remote "s3"']
     url = s3://optcommpubdataqrfan/labptptm1/dvcstore
-    acl = public-read
+['remote "s3http"']
+    url = https://optcommpubdataqrfan.s3.amazonaws.com/labptptm1/dvcstore

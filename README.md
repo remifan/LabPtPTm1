@@ -33,11 +33,11 @@ data
     └── QPSK65536_mt19937ar.h5.dvc
 ```
 
-`recv` contains the sampled wavforms which has been intentionally resampled to 2 samples/symbol (80GSa/s -> 56GSa/s) to compress its size. `sent` contains the symbol sequences loaded into AWG after proper pulse-shaping.
+`815km_SSMF` contains the transmission signal which has been intentionally resampled to 2 samples/symbol (80GSa/s -> 56GSa/s) to compress its size. `source` contains the symbol sequences loaded into AWG after proper pulse-shaping.
 
-`DP16QAM_RRC0.2_28GBd_1ch_SSNLW` is human readable label of its corresponding experiments, which can interpreted as terms 'Dual Polarization, 16-QAM, rooted raised cosine with rolloff factor 0.2, baudrate is 28GBd, single channel and single(or same or shared) source narrow linewidth laser'
+`DP16QAM_RRC0.2_28GBd_1ch_SSNLW` is human readable label of its corresponding experiments, which can be interpreted as terms 'Dual Polarization, 16-QAM, rooted raised cosine with rolloff factor 0.2, baudrate is 28GBd, single channel and single(or same or shared) source narrow linewidth laser'
 
-`LP-20_1.h5.dvc` is the mentioned record file linking to actual data `LP-20_1.h5`, whose name means 'the #1 sequence with launched power of -2 dBm'. On the other hand, `.h5` format is prefered since it is open and widely supported. For example, see [pyh5](https://www.h5py.org/) and [Matlab](https://www.mathworks.com/help/matlab/import_export/importing-hierarchical-data-format-hdf5-files.html) for helps if you are Python and Matlab users.
+`LP-20_1.h5.dvc` is the mentioned record file linking to actual data `LP-20_1.h5`, whose name means 'the #1 sequence with launched power of -2 dBm'. On the other hand, `.h5` format is prefered since it is open and widely supported. For example, see [pyh5](https://www.h5py.org/) and [Matlab](https://www.mathworks.com/help/matlab/import_export/importing-hierarchical-data-format-hdf5-files.html) for data import helps if you are Python and Matlab users.
 
 
 ## Download actual data

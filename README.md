@@ -44,7 +44,7 @@ data
 
 DVC is cross-platformed, you need to [install](https://dvc.org/doc/install) it first before you can get the actual data from remote store.
 
-assume you have dvc(cli version) installed, in your termimal, input
+assume you have dvc(cli version) installed, to get files, in your termimal, input
 ```
 mkdir sample_data && cd sample_data
 dvc get https://github.com/remifan/LabPtPTm1 data/recv/DP16QAM_RRC0.2_28GBd_1ch/LP-20_1.h5

@@ -1,5 +1,7 @@
 # LabPtPTm1
 
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
 LabPtPTm1(Lab dataset series - point to point 815km-SSMF transmission data no. 1)
 
 this dataset is collected in Aug. 2019 which is described and partially used in this [paper](https://www.nature.com/articles/s41467-020-17516-7).
@@ -64,5 +66,8 @@ you may see [dvc get](https://dvc.org/doc/command-reference/get) for more detail
 
 ## License
 
-to be determined
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
 

@@ -47,13 +47,13 @@ DVC is cross-platformed, you need to [install](https://dvc.org/doc/install) it f
 assume you have dvc(cli version) installed, to get files, in your termimal, input
 ```
 mkdir sample_data && cd sample_data
-dvc get https://github.com/remifan/LabPtPTm1 data/recv/DP16QAM_RRC0.2_28GBd_1ch/LP-20_1.h5
-dvc get https://github.com/remifan/LabPtPTm1 data/sent/16QAM65536_mt19937ar.h5
+dvc get https://github.com/remifan/LabPtPTm1 data/815km_SSMF/DP16QAM_RRC0.2_28GBd_1ch/LP-20_1.h5
+dvc get https://github.com/remifan/LabPtPTm1 data/source/16QAM65536_mt19937ar.h5
 ```
 
 you can also download a folder with its contents (>x00 MB)
 ```
-dvc get https://github.com/remifan/LabPtPTm1 data/recv/DP16QAM_RRC0.2_28GBd_1ch
+dvc get https://github.com/remifan/LabPtPTm1 data/815km_SSMF/DP16QAM_RRC0.2_28GBd_1ch
 ```
 
 Similarily, download the whole dataset is easy (~5GB)

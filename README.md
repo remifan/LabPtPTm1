@@ -4,7 +4,7 @@
 
 LabPtPTm1(Lab dataset series - point to point 815km-SSMF transmission data no. 1)
 
-this dataset is collected in Aug. 2019 which is described and partially used in this [paper](https://www.nature.com/articles/s41467-020-17516-7).
+this dataset is collected in Aug. 2019.
 
 
 ## This is a dataset registry
@@ -63,6 +63,10 @@ dvc get https://github.com/remifan/LabPtPTm1 data
 ```
 
 you may see [dvc get](https://dvc.org/doc/command-reference/get) for more details of this command
+
+
+## ToDO
+add data API
 
 ## License
 

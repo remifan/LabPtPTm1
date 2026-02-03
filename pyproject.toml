@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labptptm1"
+version = "0.2.0"
+description = "Lab dataset series - point to point 815km-SSMF transmission data no. 1"
+readme = "README.md"
+license = "CC-BY-4.0"
+requires-python = ">=3.8"
+dependencies = [
+    "zarr>=3.0",
+    "fsspec",
+    "s3fs",
+    "rich",
+]
+
+[project.urls]
+Homepage = "https://github.com/remifan/LabPtPTm1"

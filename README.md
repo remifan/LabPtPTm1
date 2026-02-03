@@ -2,14 +2,61 @@
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-LabPtPTm1(Lab dataset series - point to point 815km-SSMF transmission data no. 1)
+Lab dataset series - point to point 815km-SSMF transmission data no. 1.
 
-this dataset is collected in Aug. 2019.
+Experimental transmission of DP-16QAM signal over ~815km SSMF (10 spans) at 28 GBd.
+This dataset was collected in Aug 2019.
 
-**NOTE**: I have decided to migrate to Zarr for many good reasons. Before DVC is deprecated, you can still use `dvc get` to download the data with additional `--rev 0.1.0` option.
+## Installation
 
-## Access Data
-Work in progress
+```bash
+pip install https://github.com/remifan/LabPtPTm1/archive/master.zip
+```
+
+## Usage
+
+```python
+from labptptm1 import dataset
+
+# browse the dataset structure
+dataset.tree()
+```
+
+```
+/
+├── 815km_SSMF
+│   └── DP16QAM_RRC0.2_28GBd_1ch
+│       ├── LP-20_1
+│       │   ├── recv (3500000, 2) complex64
+│       │   └── sent (1750000, 2) complex64
+│       ├── LP-20_2
+│       ...
+└── source
+    └── 16QAM65536
+        └── src (65536, 2) complex64
+```
+
+```python
+# access a specific transmission data group
+ds = dataset['815km_SSMF/DP16QAM_RRC0.2_28GBd_1ch/LP-20_1']
+
+# view metadata
+dict(ds.attrs)  # {'lpdbm': -2.0, 'lpw': 0.000630957344480193}
+
+# load received waveforms (2 samples/symbol, 2 polarizations)
+recv = ds['recv'][:]  # shape: (3500000, 2), dtype: complex64
+
+# load synchronized sent symbols
+sent = ds['sent'][:]  # shape: (1750000, 2), dtype: complex64
+
+# load source symbols
+src = dataset['source/16QAM65536/src'][:]  # shape: (65536, 2), dtype: complex64
+```
+
+Data is stored remotely on AWS S3 and downloaded on-demand with local caching.
+
+For a practical example of using this dataset for adaptive equalization, see the
+[commplax equalizers tutorial](https://commplax.readthedocs.io/en/latest/tutorial/equalizers.html).
 
 ## License
 

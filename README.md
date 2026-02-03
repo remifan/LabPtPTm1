@@ -58,6 +58,10 @@ Data is stored remotely on AWS S3 and downloaded on-demand with local caching.
 For a practical example of using this dataset for adaptive equalization, see the
 [commplax equalizers tutorial](https://commplax.readthedocs.io/en/latest/tutorial/equalizers.html).
 
+## See also
+
+[LabPtPTm2](https://github.com/remifan/LabPtPTm2) - 1125km 7-channel DP-16QAM WDM transmission using quantum random bit source (Jan 2021)
+
 ## License
 
 This work is licensed under a

@@ -10,7 +10,7 @@ This dataset was collected in Aug 2019.
 ## Installation
 
 ```bash
-pip install https://github.com/remifan/LabPtPTm1/archive/master.zip
+pip install https://github.com/remifan/LabPtPTm1/archive/main.zip
 ```
 
 ## Usage

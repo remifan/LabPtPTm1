@@ -7,6 +7,44 @@ Lab dataset series - point to point 815km-SSMF transmission data no. 1.
 Experimental transmission of DP-16QAM signal over ~815km SSMF (10 spans) at 28 GBd.
 This dataset was collected in Aug 2019.
 
+## Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                        AWS S3 (Remote)                           │
+│  s3://optcommpubdataqrfan/labptptm1_zarr                        │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │                   Zarr Store (read-only)                   │  │
+│  │  /                                                         │  │
+│  │  ├── 815km_SSMF/DP16QAM_RRC0.2_28GBd_1ch/                │  │
+│  │  │   ├── LP-20_1/ ─► recv (3500000,2) + sent (1750000,2) │  │
+│  │  │   ├── LP-20_2/                                         │  │
+│  │  │   └── ...                                              │  │
+│  │  └── source/16QAM65536/ ─► src (65536,2)                  │  │
+│  └────────────────────────────────────────────────────────────┘  │
+└──────────────────────┬───────────────────────────────────────────┘
+                       │ anonymous access (anon=True)
+                       ▼
+          ┌────────────────────────┐
+          │  simplecache (fsspec)  │
+          │  local cache layer     │
+          └────────────┬───────────┘
+                       │ on-demand download + caching
+                       ▼
+          ┌────────────────────────┐
+          │   zarr.open_group()    │
+          │   consolidated meta    │
+          └────────────┬───────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │  from labptptm1        │
+          │    import dataset      │
+          │                        │
+          │  dataset[path][:]      │
+          └────────────────────────┘
+```
+
 ## Installation
 
 ```bash
